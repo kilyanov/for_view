@@ -1,0 +1,28 @@
+{
+    "name": "kilyanov/yii2-filesystem",
+    "description": "Filesystem for Yii 2",
+    "type": "yii2-extension",
+    "version": "0.0.1",
+    "keywords": [
+        "yii2",
+        "extension"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Kilaynov Alex",
+            "email": "lsd-7d@yandex.ru"
+        }
+    ],
+    "require": {
+        "ext-fileinfo": "*",
+        "yiisoft/yii2": "~2.0.12",
+        "league/flysystem": "^2.0",
+        "league/glide": "2.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "kilyanov\\filesystem\\": "src"
+        }
+    }
+}

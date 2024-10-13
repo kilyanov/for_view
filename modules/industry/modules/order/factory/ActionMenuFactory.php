@@ -1,0 +1,81 @@
+<?php
+
+declare(strict_types=1);
+
+namespace app\modules\industry\modules\order\factory;
+
+use kilyanov\architect\entity\DropdownEntity;
+use kilyanov\architect\entity\UrlEntity;
+use kilyanov\architect\interfaces\BaseActionMenuFactoryInterface;
+use yii\base\InvalidConfigException;
+use yii\helpers\ArrayHelper;
+class ActionMenuFactory implements BaseActionMenuFactoryInterface
+{
+    /**
+     * @param array $config
+     * @return string
+     * @throws InvalidConfigException
+     */
+    public static function create(array $config = []): string
+    {
+        $entity = new DropdownEntity([
+            'name' => BaseActionMenuFactoryInterface::DEFAULT_ICON,
+            'options' => [
+                'class' => 'btn btn-default dropdown-toggle',
+                'data-bs-toggle' => 'dropdown',
+                'aria-expanded' => false,
+            ],
+            'items' => [
+                new UrlEntity([
+                    'name' => 'Закрыть н/ч',
+                    'url' => ArrayHelper::merge(['close-norma'], $config),
+                    'options' => [
+                        'class' => 'dropdown-item',
+                        'title' => 'Закрыть н/ч',
+                        'role' => 'modal-remote'
+                    ]
+                ]),
+                new UrlEntity([
+                    'name' => 'Отменить списание',
+                    'url' => ArrayHelper::merge(['cancel-close-norma'], $config),
+                    'options' => [
+                        'class' => 'dropdown-item',
+                        'title' => 'Отменить списание',
+                        'role' => 'modal-remote',
+                    ]
+                ]),
+                new UrlEntity([
+                    'name' => 'Редактировать последнее списание',
+                    'url' => ArrayHelper::merge(['update-last-close-norma'], $config),
+                    'options' => [
+                        'class' => 'dropdown-item',
+                        'title' => 'Закрыть н/ч',
+                        'role' => 'modal-remote'
+                    ]
+                ]),
+                new UrlEntity([
+                    'name' => 'Редактировать',
+                    'url' => ArrayHelper::merge(['update'], $config),
+                    'options' => [
+                        'class' => 'dropdown-item',
+                        'title' => 'Редактировать',
+                        'role' => 'modal-remote'
+                    ]
+                ]),
+                new UrlEntity([
+                    'name' => 'Удалить',
+                    'url' => ArrayHelper::merge(['delete'], $config),
+                    'options' => [
+                        'class' => 'dropdown-item',
+                        'title' => 'Удалить',
+                        'role' => 'modal-remote',
+                        'data-confirm-title' => 'Подтверждение удаления!',
+                        'data-confirm-message' => 'Вы уверены что хотите удалить запись?',
+                    ]
+                ]),
+            ]
+        ]);
+
+        return $entity->make();
+    }
+}

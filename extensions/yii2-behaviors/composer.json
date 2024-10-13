@@ -1,0 +1,26 @@
+{
+    "name": "kilyanov/yii2-behaviors",
+    "description": "Behaviors for Yii 2",
+    "type": "yii2-extension",
+    "version": "0.0.2",
+    "keywords": [
+        "yii2",
+        "extension"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Kilaynov Alex",
+            "email": "lsd-7d@yandex.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.12",
+        "oittaa/uuid": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "kilyanov\\behaviors\\": "src"
+        }
+    }
+}

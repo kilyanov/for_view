@@ -1,0 +1,24 @@
+{
+  "name": "kilyanov/yii2-repository",
+  "description": "Файловое хранилище",
+  "type": "yii2-extension",
+  "version": "0.0.1",
+  "keywords": [
+    "yii2",
+    "extension",
+    "repository",
+    "storage"
+  ],
+  "license": "BSD-3-Clause",
+  "require": {
+    "php": ">=7.1.0",
+    "yiisoft/yii2": "~2.0.12",
+    "kilyanov/yii2-filesystem": "0.0.1",
+    "kilyanov/yii2-behaviors": "0.0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "kilyanov\\repository\\": "src"
+    }
+  }
+}

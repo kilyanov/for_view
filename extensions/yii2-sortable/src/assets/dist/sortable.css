@@ -1,0 +1,29 @@
+.ui-sortable {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ui-sortable > li > .ui-sortable {
+    padding-left: 40px;
+}
+
+.list-group-item {
+    border: 1px solid rgba(0,0,0,.125);
+    margin-top: -1px;
+    padding: 10px 0 10px 0;
+}
+
+.ui-sortable .handle {
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: move;
+}
+
+.ui-sortable .list-group-item .control {
+    float: right;
+}
+
+.ui-sortable .control a {
+    margin: 5px;
+}

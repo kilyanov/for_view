@@ -1,0 +1,27 @@
+{
+  "name": "kilyanov/yii2-dropzone",
+  "description": "dropzone",
+  "type": "yii2-extension",
+  "version": "0.0.1",
+  "keywords": [
+    "yii2",
+    "extension",
+    "dropzone"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Kilaynov Alex",
+      "email": "lsd-7d@yandex.ru"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "yiisoft/yii2": "~2.0.12"
+  },
+  "autoload": {
+    "psr-4": {
+      "kilyanov\\dropzone\\": "src"
+    }
+  }
+}
